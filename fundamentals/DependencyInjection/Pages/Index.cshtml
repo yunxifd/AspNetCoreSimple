@@ -1,0 +1,44 @@
+@page
+@model DependencyInjection.Pages.Index
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Dependency Injection Sample";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+<div>
+    <h1>@ViewData["Title"]</h1>
+    <div>
+        <h2>Page Model Operation</h2>
+        <dl>
+            <dt>Transient</dt>
+            <dd>@Model.TransientOperation.OperationId</dd>
+            <dt>Scoped</dt>
+            <dd>@Model.ScopedOperation.OperationId</dd>
+            <dt>Singleton</dt>
+            <dd>@Model.SingletonOperation.OperationId</dd>
+            <dt>Instance</dt>
+            <dd>@Model.SingletonInstanceOperation.OperationId</dd>
+        </dl>
+        <h2>OperationService Operations</h2>
+        <dl>
+            <dt>Transient</dt>
+            <dd>@Model.OperationService.TransientOperation.OperationId</dd>
+            <dt>Scoped</dt>
+            <dd>@Model.OperationService.ScopedOperation.OperationId</dd>
+            <dt>Singleton</dt>
+            <dd>@Model.OperationService.SingletonOperation.OperationId</dd>
+            <dt>Instance</dt>
+            <dd>@Model.OperationService.SingletonInstanceOperation.OperationId</dd>
+        </dl>
+    </div>
+</div>
+</body>
+</html>
